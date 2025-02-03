@@ -33,6 +33,10 @@ dependencies:
   gesture_navigation: ^0.0.1
 ```
 
+
+https://github.com/user-attachments/assets/9b25aa59-8df4-40cc-b725-560ec5fd7866
+
+
 ## Edge Gesture (Left & Right Swipe):
 ```
 EdgeGesture(
