@@ -33,6 +33,37 @@ dependencies:
   gesture_navigation: ^0.0.1
 ```
 
+
+https://github.com/user-attachments/assets/7965c924-5d71-4faa-9fd9-ce1d30708ce4
+
+
+## Drag & Drop Reordering:
+```
+DragReorder(
+        items: items,
+        onReorder: updateOrder,
+      ),
+```
+
+
+https://github.com/user-attachments/assets/74a968e1-8d2e-4053-80e2-00f7b90f75a0
+
+
+## Swipe Navigation:
+```
+SwipeNavigation(
+      pages: [
+        PageScreen(title: "Page 1"),
+        PageScreen(title: "Page 2"),
+        PageScreen(title: "Page 3"),
+      ],
+    );
+```
+
+
+https://github.com/user-attachments/assets/9b25aa59-8df4-40cc-b725-560ec5fd7866
+
+
 ## Edge Gesture (Left & Right Swipe):
 ```
 EdgeGesture(
@@ -50,6 +81,10 @@ EdgeGesture(
       ),
 ```
 
+
+https://github.com/user-attachments/assets/bc484fe8-e58c-4cff-b48f-d023171cd3a6
+
+
 ## Pinch-to-Zoom with Panning & Rotation:
 ```
 PinchZoom(
@@ -62,22 +97,8 @@ PinchZoom(
 
 ```
 
-## Drag & Drop Reordering:
-```
-DragReorder(
-        items: items,
-        onReorder: updateOrder,
-      ),
+https://github.com/user-attachments/assets/a5efd007-cafb-48be-8938-784298e2005f
 
-Swipe Navigation:
-SwipeNavigation(
-      pages: [
-        PageScreen(title: "Page 1"),
-        PageScreen(title: "Page 2"),
-        PageScreen(title: "Page 3"),
-      ],
-    );
-```
 
 ## Modal Swipe Control:
 ```
@@ -99,3 +120,8 @@ ElevatedButton(
           child: Text("Open Modal"),
         ),
 ```
+
+## Authors
+
+- [@SufiyanRazaq](https://github.com/SufiyanRazaq/gesture_navigation_plugin)
+
