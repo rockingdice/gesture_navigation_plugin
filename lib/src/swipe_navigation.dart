@@ -156,7 +156,6 @@ PageRouteBuilder createPageTransition(Widget page, SwipeTransitionType type) {
         case SwipeTransitionType.scale:
           return ScaleTransition(scale: animation, child: child);
         case SwipeTransitionType.slide:
-        default:
           const begin = Offset(1.0, 0.0);
           const end = Offset.zero;
           const curve = Curves.easeInOut;

@@ -21,7 +21,6 @@ class DragReorder extends StatefulWidget {
   /// - `enableUndo`: Enables the undo last move feature.
   /// - `enableSnackbar`: Enables snackbar messages.
   /// - `saveOrder`: Enables saving the order persistently.
-  /// - `itemHeight`: The height of each draggable item.
   /// - `backgroundColor`: Optional background color.
   const DragReorder({
     Key? key,
@@ -87,14 +86,6 @@ class _DragReorderState extends State<DragReorder> {
     }
   }
 
-  /// Displays a snackbar with the given message
-  void _showSnackbar(String message) {
-    if (widget.enableSnackbar) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(message)));
-    }
-  }
-
   /// Shows an undo snackbar to revert last reorder action
   void _showUndoSnackbar() {
     if (!widget.enableUndo || _previousOrder == null) return;
@@ -120,7 +111,6 @@ class _DragReorderState extends State<DragReorder> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        /// **Optional Color Picker Button**
         if (widget.enableColorPicker)
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -162,7 +152,6 @@ class _DragReorderState extends State<DragReorder> {
                           child:
                               const Icon(Icons.drag_handle, color: Colors.grey),
                         ),
-                        tileColor: Colors.white,
                         onLongPress: () {
                           setState(() {
                             _draggingItem = item;
