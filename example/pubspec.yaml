@@ -1,0 +1,25 @@
+name: example_gesture_navigation
+description: "Example app for testing the Gesture Navigation package."
+publish_to: "none"
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  gesture_navigation:
+    path: ../  # Make sure this points to the main package directory
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
