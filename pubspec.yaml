@@ -1,5 +1,5 @@
 name: gesture_navigation
-description: "A new Flutter package project."
+description: "A Flutter package for handling intuitive gesture navigation, including edge swipes, pinch-to-zoom, and modal controls."
 version: 0.0.1
 homepage: http://sufiyanrazaq.com/
 repository: https://github.com/SufiyanRazaq/gesture_navigation_plugin
