@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.2] - Initial Release (2025-02-03)
+## [0.0.3] - Initial Release (2025-02-03)
 
 ### 🐞 Bug Fixes:
 - Fixed **edge gesture misdetection** when swiping diagonally.

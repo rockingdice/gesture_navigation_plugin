@@ -139,7 +139,8 @@ class _DragReorderState extends State<DragReorder> {
                         boxShadow: [
                           if (_draggingItem == item)
                             BoxShadow(
-                              color: _selectedColor.withOpacity(0.8),
+                              color:
+                                  _selectedColor.withAlpha((0.8 * 255).toInt()),
                               blurRadius: 10,
                               spreadRadius: 2,
                             ),

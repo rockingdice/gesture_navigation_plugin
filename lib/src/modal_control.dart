@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 /// A widget that allows swipe-up to open and swipe-down to dismiss a modal with smooth interaction.
 class ModalControl extends StatefulWidget {
