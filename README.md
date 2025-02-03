@@ -120,3 +120,8 @@ ElevatedButton(
           child: Text("Open Modal"),
         ),
 ```
+
+## Authors
+
+- [@SufiyanRazaq](https://github.com/SufiyanRazaq/gesture_navigation_plugin)
+
