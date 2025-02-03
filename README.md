@@ -43,8 +43,14 @@ DragReorder(
         items: items,
         onReorder: updateOrder,
       ),
+```
 
-Swipe Navigation:
+
+https://github.com/user-attachments/assets/74a968e1-8d2e-4053-80e2-00f7b90f75a0
+
+
+## Swipe Navigation:
+```
 SwipeNavigation(
       pages: [
         PageScreen(title: "Page 1"),
