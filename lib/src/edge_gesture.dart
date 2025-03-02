@@ -47,9 +47,11 @@ class _EdgeGestureState extends State<EdgeGesture> {
       });
 
       Future.delayed(const Duration(milliseconds: 500), () {
-        setState(() {
-          _gestureTriggered = false;
-        });
+        if (mounted) {
+          setState(() {
+            _gestureTriggered = false;
+          });
+        }
       });
 
       _triggerHapticFeedback();
@@ -65,12 +67,9 @@ class _EdgeGestureState extends State<EdgeGesture> {
       onHorizontalDragUpdate: (details) {
         if (details.primaryDelta == null) return;
 
-        if (details.globalPosition.dx < widget.edgeThreshold &&
-            details.primaryDelta! > 0) {
+        if (details.globalPosition.dx < widget.edgeThreshold && details.primaryDelta! > 0) {
           _handleGesture(widget.onSwipeLeftEdge);
-        } else if (details.globalPosition.dx >
-                screenWidth - widget.edgeThreshold &&
-            details.primaryDelta! < 0) {
+        } else if (details.globalPosition.dx > screenWidth - widget.edgeThreshold && details.primaryDelta! < 0) {
           _handleGesture(widget.onSwipeRightEdge);
         }
       },
