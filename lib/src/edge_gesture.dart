@@ -21,7 +21,7 @@ class EdgeGesture extends StatefulWidget {
     required this.child,
     this.onSwipeLeftEdge,
     this.onSwipeRightEdge,
-    this.edgeThreshold = 40.0,
+    this.edgeThreshold = 60.0,
     this.enableHapticFeedback = true,
   }) : super(key: key);
 
@@ -31,6 +31,7 @@ class EdgeGesture extends StatefulWidget {
 
 class _EdgeGestureState extends State<EdgeGesture> {
   bool _gestureTriggered = false;
+  double _dragStart = 0.0;
 
   /// **Triggers Haptic Feedback on Gesture**
   void _triggerHapticFeedback() {
@@ -64,10 +65,17 @@ class _EdgeGestureState extends State<EdgeGesture> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return GestureDetector(
+      onHorizontalDragStart: (details) {
+        print("start dragging hor");
+        _dragStart = details.globalPosition.dx;
+      },
       onHorizontalDragUpdate: (details) {
+        print("start dragging hor up");
         if (details.primaryDelta == null) return;
+        print("start dragging hor up pass ${_dragStart} ${details.globalPosition.dx} , ${details.primaryDelta}");
 
-        if (details.globalPosition.dx < widget.edgeThreshold && details.primaryDelta! > 0) {
+        if (_dragStart < widget.edgeThreshold && details.primaryDelta! > 40.0) {
+          print("start dragging hor up pass handled");
           _handleGesture(widget.onSwipeLeftEdge);
         } else if (details.globalPosition.dx > screenWidth - widget.edgeThreshold && details.primaryDelta! < 0) {
           _handleGesture(widget.onSwipeRightEdge);
